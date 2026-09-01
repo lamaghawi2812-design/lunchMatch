@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="LunchMatch beginner web-development starter project" />
+    <title>LunchMatch</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="LunchMatch home">LunchMatch</a>
+      <span class="prototype-label">Teaching prototype</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <img
+          class="hero-image"
+          src="assets/lunch-table.png"
+          alt="Friends sharing several different lunch dishes around a table"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">One decision. Fewer debates.</p>
+          <h1 id="page-title">Find a lunch everyone can enjoy.</h1>
+          <p>Choose a few preferences and compare matching places from our mock dataset.</p>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Restaurant matching tool">
+        <form id="preference-form" class="preference-panel">
+          <div class="section-heading">
+            <p class="step-label">Step 1</p>
+            <h2>Set the group preferences</h2>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              Location
+              <select id="location" name="location">
+                <option value="any">Any location</option>
+                <option value="Nicosia">Nicosia</option>
+                <option value="Limassol">Limassol</option>
+                <option value="Larnaca">Larnaca</option>
+              </select>
+            </label>
+
+            <label>
+              Cuisine
+              <select id="cuisine" name="cuisine">
+                <option value="any">Any cuisine</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Healthy">Healthy</option>
+              </select>
+            </label>
+
+            <label>
+              Dietary need
+              <select id="dietary" name="dietary">
+                <option value="any">No dietary filter</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-free</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Find lunch</button>
+            <button class="text-button" id="reset-button" type="reset">Reset</button>
+          </div>
+        </form>
+
+        <section class="results-panel" aria-labelledby="results-title">
+          <div class="section-heading">
+            <p class="step-label">Step 2</p>
+            <h2 id="results-title">Matching restaurants</h2>
+          </div>
+          <p id="result-summary" class="result-summary" aria-live="polite"></p>
+          <div id="results" class="results-grid"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      Mock data only. Built for the Tech2Peace Software Developer Track.
+    </footer>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

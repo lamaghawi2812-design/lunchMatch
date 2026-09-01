@@ -1,0 +1,14 @@
+{
+  "name": "tech2peace-lunchmatch-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/matcher.test.js",
+    "test:buggy": "node --test tests/matcher-buggy.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
